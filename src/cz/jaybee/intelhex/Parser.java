@@ -37,7 +37,7 @@ import java.io.*;
 public class Parser {
 
     private final BufferedReader reader;
-    private DataListener dataListener = null;
+    private IDataListener dataListener = null;
     private static final int HEX = 16;
     private boolean eof = false;
     private int recordIdx = 0;
@@ -67,7 +67,7 @@ public class Parser {
      *
      * @param listener
      */
-    public void setDataListener(DataListener listener) {
+    public void setDataListener(IDataListener listener) {
         this.dataListener = listener;
     }
 
